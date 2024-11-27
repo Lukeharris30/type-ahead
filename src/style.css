@@ -7,14 +7,7 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  --container-width: 300px;
-	--background-color: hsl(10, 0%, 1.8%);
 	--background-highlight: hsl(20, 10%, 10%);
-	--background-highlight-1: hsl(20, 10%, 5%);
 	--font-color: hsl(30, 80%, 90%);
 }
 
@@ -25,6 +18,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
 body{
 	background: var(--background-color);
 	color: var(--font-color);
@@ -35,16 +29,6 @@ body{
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
-}
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
 }
 
 .typeahead-container{
@@ -53,11 +37,7 @@ body{
   label:has(input:focus){
     outline: 1px solid var(--font-color);
   }
-  
-  label:has(input:checked) {
-    background: black;
-    color: white;
-  }
+
   input[type="radio"][data-dynamic-typeahead]{
     position: absolute;
     opacity: 0;
@@ -65,6 +45,7 @@ body{
       background: var(--background-highlight);
     }
   }
+
   label {
     display: block;
     &:hover, &:focus{
