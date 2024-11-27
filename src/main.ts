@@ -1,11 +1,35 @@
-import './style.css'
+import "./style.css";
 
-import { setupTypeAhead } from './typeahead.ts'
-const typeaheadList = ['apple', 'banana', 'cherry', 'date', 'elderberry', 'fig', 'grape', 'honeydew', 'kiwi', 'lemon', 'mango', 'nectarine', 'orange', 'pear', 'quince', 'raspberry', 'strawberry', 'tangerine', 'ugli', 'vanilla', 'watermelon', 'ximenia', 'yellow', 'zucchini', 
-  'apple-sauce'
-]
+import { setupTypeAhead } from "./typeahead.ts";
+const typeaheadList = [
+  "apple",
+  "banana",
+  "cherry",
+  "date",
+  "elderberry",
+  "fig",
+  "grape",
+  "honeydew",
+  "kiwi",
+  "lemon",
+  "mango",
+  "nectarine",
+  "orange",
+  "pear",
+  "quince",
+  "raspberry",
+  "strawberry",
+  "tangerine",
+  "ugli",
+  "vanilla",
+  "watermelon",
+  "ximenia",
+  "yellow",
+  "zucchini",
+  "apple-sauce",
+];
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = /*html*/`
+document.querySelector<HTMLDivElement>("#app")!.innerHTML = /*html*/ `
 <div class="typeahead-container">
 
   <input type="search" id="search" autocomplete="off"/>
@@ -14,6 +38,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = /*html*/`
   </div>
 
 </div>
-`
+`;
 
-setupTypeAhead(document.querySelector<HTMLInputElement>('#search')!, typeaheadList, document.querySelector<HTMLDivElement>('#list-options')!)
+setupTypeAhead(
+  document.querySelector<HTMLInputElement>("#search")!,
+  typeaheadList,
+  document.querySelector<HTMLDivElement>("#list-options")!,
+);
