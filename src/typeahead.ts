@@ -1,6 +1,5 @@
 import { filterOptions } from "./utils/filterOptions";
 import { renderListOptions } from "./utils/renderListOptions";
-import { setInputValueAndSubmit } from "./utils/setInputValueAndSubmit";
 import { attachEventListenerToListOptions } from "./utils/attachEventListenerToListOptions";
 
 export function setupTypeAhead(
@@ -16,12 +15,6 @@ export function setupTypeAhead(
   }
 
   function handleInputComparison(text: string) {
-    const exactMatch = optionsList.filter((option) => option === text);
-
-    if (exactMatch && exactMatch.length === 1) {
-      console.log("Match found");
-      setInputValueAndSubmit(exactMatch[0], element, optionsListContainer);
-    } else {
       renderListOptions(filterOptions(text, optionsList), optionsListContainer);
       attachEventListenerToListOptions(
         Array.from(
@@ -30,6 +23,5 @@ export function setupTypeAhead(
         element,
         optionsListContainer,
       );
-    }
   }
 }
