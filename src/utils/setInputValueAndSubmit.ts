@@ -11,6 +11,6 @@ export function setInputValueAndSubmit(
   element.value = inputValue;
   const event = new Event("change");
   element.dispatchEvent(event);
-  console.log('emmited event');
+  console.log("emmited event");
   clearListOptions(optionsListContainer);
 }
