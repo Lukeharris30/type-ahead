@@ -1,6 +1,6 @@
 import "./style.css";
+import { setupTypeAhead } from "./typeahead";
 
-import { setupTypeAhead } from "./typeahead.ts";
 const typeaheadList = [
   "apple",
   "banana",
